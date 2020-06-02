@@ -9,6 +9,8 @@ nums = [1,2,3,4,5]
 target = 5
 1 + 5 > 6
 j > i
+tips:
+在对列表使用双指针时一定要对列表排序
 """
 
 
@@ -23,7 +25,3 @@ class Solution(object):
                 j -= 1
             else:
                 i += 1
-
-
-s = Solution()
-print(s.two_sum([0, 1, 3, 7, 9, 10, 20, 6, 0, 8, 2, 4], 0))
