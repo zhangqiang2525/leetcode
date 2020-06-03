@@ -26,14 +26,14 @@
 
 def banary_search(nums, target):
     l, r = 0, len(nums) - 1
-    while l <= r:
+    while l <= r:   # 这里需要注意一下，如果去掉=，当目标值出现在nums[-1]时则不会被取到
         mid = (l + r) // 2
         if nums[mid] == target:  # 如果中间值等于目标值，则返回mid
             return mid
         elif nums[mid] > target:    # 如果中间值大于目标值说明目标值不会出现在右半边，则使‘右指针’指向中间值然后继续上述操作
             r = mid - 1     # 这是二分法的精髓所在
         else:
-            l = mid + 1     
+            l = mid + 1
 
 
 s = banary_search([1, 2, 3, 4, 5, 6], 5)
