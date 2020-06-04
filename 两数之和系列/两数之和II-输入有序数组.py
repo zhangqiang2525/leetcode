@@ -16,8 +16,7 @@ tips:
 
 class Solution(object):
     def twoSum(self, numbers, target):
-        i = 0
-        j = len(numbers) - 1
+        i, j = 0, len(numbers) - 1
         while i < j:
             if numbers[i] + numbers[j] == target:
                 return i + 1, j + 1
@@ -43,7 +42,7 @@ class Solution1(object):
         l, r = 0, len(numbers) - 1  # 取数组首尾元素下标
         while l < r:
             sum_ = numbers[l] + numbers[r]  # 取下标为l,r元素的和
-            if sum_ < target:   # 与目标值作比较
+            if sum_ < target:  # 与目标值作比较
                 """
                 这里为什么是sum_ < target就从左边取？
                 请注意理解target - numbers[r],答案就在这里;
