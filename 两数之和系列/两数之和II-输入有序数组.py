@@ -59,5 +59,6 @@ class Solution1(object):
                 return [l + 1, r + 1]
 
 
+
 s = Solution1()
 print(s.twoSum([1, 2, 5, 5, 7], 10))
